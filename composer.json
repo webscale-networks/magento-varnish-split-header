@@ -1,0 +1,27 @@
+{
+    "name": "webscale-networks/magento-varnish-split-header",
+    "description": "Webscale sub-module responsible for split varnish X-Magento-Tags header.",
+    "type": "magento2-module",
+    "license": [
+        "MIT"
+    ],
+    "version": "2.3.4.0",
+    "require": {
+        "php": "7.2 - 7.4",
+        "magento/magento2-base": "<2.3.5",
+        "webscale-networks/magento-varnish-api": "*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Webscale\\SplitHeader\\": ""
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}
+
