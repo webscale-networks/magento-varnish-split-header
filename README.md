@@ -5,7 +5,7 @@ Sub-module responsible for split X-Magento-Tags header when varnish selected as 
 To install extension run the following in magento root directory:
 
 ```console
-composer config repositories.webscale-networks git https://github.com/webscale-networks/magento-varnish-split-header.git
+composer config repositories.webscale-networks-split-header git https://github.com/webscale-networks/magento-varnish-split-header.git
 ```
 
 To avoid issues with CI/CD and github add `"no-api": true` to the repo settings, so it looks like this:

@@ -6,10 +6,10 @@
 
 namespace Webscale\SplitHeader\Model\Http;
 
-use Zend\Http\Header\MultipleHeaderInterface;
-use Zend\Http\Header\HeaderValue;
-use Zend\Http\Header\GenericHeader;
-use Zend\Http\Header\Exception\InvalidArgumentException;
+use Laminas\Http\Header\MultipleHeaderInterface;
+use Laminas\Http\Header\HeaderValue;
+use Laminas\Http\Header\GenericHeader;
+use Laminas\Http\Header\Exception\InvalidArgumentException;
 
 class XMagentoTags implements MultipleHeaderInterface
 {

@@ -7,7 +7,7 @@
 namespace Webscale\SplitHeader\Plugin;
 
 use Magento\Framework\HTTP\PhpEnvironment\Response as Subject;
-use Zend\Http\HeaderLoader;
+use Laminas\Http\HeaderLoader;
 use Webscale\SplitHeader\Model\Http\XMagentoTags;
 use Webscale\SplitHeader\Helper\Config;
 
