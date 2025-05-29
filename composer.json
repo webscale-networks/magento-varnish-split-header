@@ -5,7 +5,7 @@
     "license": [
         "MIT"
     ],
-    "version": "2.3.5.0",
+    "version": "2.4.6.1",
     "require": {
         "php": ">=7.3",
         "magento/magento2-base": ">2.3.4",
