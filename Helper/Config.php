@@ -20,10 +20,21 @@ class Config extends CoreConfig
     /** @var CacheConfig $cacheConfig */
     protected $cacheConfig;
 
+    /** @var ModuleListInterface $moduleList */
+    protected $moduleList;
+
+    /** @var WriterInterface $writerInterface */
+    protected $writerInterface;
+
+    /** @var Logger $logger */
+    protected $logger;
+
     /**
      * @param Context $context
      * @param ModuleListInterface $moduleList
+     * @param WriterInterface $writerInterface
      * @param Logger $logger
+     * @param CacheConfig $cacheConfig
      */
     public function __construct(
         Context $context,
