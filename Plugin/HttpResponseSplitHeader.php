@@ -40,18 +40,18 @@ class HttpResponseSplitHeader
      *
      * @param Subject  $subject
      * @param \Closure $proceed
-     * @param string   $name
-     * @param string   $value
-     * @param bool     $replace
+     * @param string $name
+     * @param string $value
+     * @param bool $replace
      *
      * @return Subject|mixed
      */
     public function aroundSetHeader(
-        Subject $subject,
+        Subject  $subject,
         \Closure $proceed,
-        $name,
-        $value,
-        $replace = false
+        string   $name,
+        string   $value,
+        bool     $replace = false
     ) {
         if (!$this->config->isSplitEnabled() || !$this->config->isVarnish()) {
             return $proceed($name, $value, $replace);

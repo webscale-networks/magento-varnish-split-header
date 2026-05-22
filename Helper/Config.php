@@ -67,7 +67,7 @@ class Config extends CoreConfig
      *
      * @return bool
      */
-    public function isVarnish()
+    public function isVarnish(): bool
     {
         return ($this->cacheConfig->isEnabled() && $this->cacheConfig->getType() == CacheConfig::VARNISH);
     }
