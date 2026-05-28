@@ -26,7 +26,7 @@ class XMagentoTags implements MultipleHeaderInterface
     /**
      * @param string|null $value
      */
-    public function __construct($value = null)
+    public function __construct(string $value = null)
     {
         if ($value) {
             HeaderValue::assertValid($value);
@@ -41,12 +41,12 @@ class XMagentoTags implements MultipleHeaderInterface
      * @return self
      * @throws InvalidArgumentException If the name field in the given header line does not match.
      */
-    public static function fromString($headerLine)
+    public static function fromString(string $headerLine)
     {
         list($name, $value) = GenericHeader::splitHeaderLine($headerLine);
 
         // check to ensure proper header type for this factory
-        if (strtolower($name) !== strtolower(self::HEADER_NAME)) {
+        if (strtolower((string) $name) !== strtolower(self::HEADER_NAME)) {
             throw new InvalidArgumentException(
                 sprintf(
                     'Invalid header line for %s string: "%s"',
@@ -68,7 +68,7 @@ class XMagentoTags implements MultipleHeaderInterface
      * @throws InvalidArgumentException
      * @return string
      */
-    public function toStringMultipleHeaders(array $headers)
+    public function toStringMultipleHeaders(array $headers): array
     {
         $name = $this->getFieldName();
         $values = array($this->getFieldValue());
