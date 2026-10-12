@@ -41,7 +41,7 @@ class XMagentoTags implements MultipleHeaderInterface
      * @return self
      * @throws InvalidArgumentException If the name field in the given header line does not match.
      */
-    public static function fromString(string $headerLine)
+    public static function fromString($headerLine)
     {
         list($name, $value) = GenericHeader::splitHeaderLine($headerLine);
 
